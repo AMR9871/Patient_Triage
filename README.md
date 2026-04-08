@@ -58,14 +58,28 @@ This application supports desktop and mobile platforms and provides a complete f
 1. **Clone the repository**
    ```bash
    git clone <YOUR_GIT_URL>
+   ```
 
-Navigate to the project directoryBashcd <YOUR_PROJECT_NAME>
-Install the necessary dependenciesBashnpm i
-Start the development serverBashnpm run dev
+2. **Navigate to the project directory**
+   ```bash
+   cd <YOUR_PROJECT_NAME>
+   ```
+
+3. **Install the necessary dependencies**
+   ```bash
+   npm i
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
 The development server will start with auto-reloading and an instant preview.
-Future Enhancements
 
-Improved AI-driven chatbot for automated triage.
-Enhanced real-time doctor-patient communication via live chat/video integration.
-Integration with government health records for real-time updates.
+## Future Enhancements
+
+- Improved AI-driven chatbot for automated triage.
+- Enhanced real-time doctor-patient communication via live chat/video integration.
+- Integration with government health records for real-time updates.
+
