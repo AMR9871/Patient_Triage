@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 212 96% 54%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 212 96% 54%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 212 96% 54%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 212 96% 78%;
+
+    /* Triage system specific colors */
+    --emergency: 0 84% 60%;
+    --urgent: 24 100% 62%;
+    --standard: 214 95% 60%;
+    --non-urgent: 160 84% 39%;
+    --minor: 214 32% 91%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom utility classes */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/50 shadow-sm;
+  }
+  
+  .subtle-shadow {
+    @apply shadow-[0_4px_16px_-4px_rgba(0,0,0,0.05)];
+  }
+
+  .deep-shadow {
+    @apply shadow-[0_10px_30px_-12px_rgba(0,0,0,0.15)];
+  }
+
+  .interactive-button {
+    @apply transition-all duration-300 ease-in-out transform hover:scale-[0.98] active:scale-[0.96];
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 animate-fade-in;
+  }
+
+  .section-heading {
+    @apply text-2xl font-medium tracking-tight mb-6 text-foreground/90;
+  }
+
+  .page-transition-wrapper {
+    @apply w-full h-full animate-scale-in;
+  }
+
+  /* Triage specific utility classes */
+  .triage-emergency {
+    @apply bg-red-100 text-red-700 border-red-200;
+  }
+
+  .triage-urgent {
+    @apply bg-orange-100 text-orange-700 border-orange-200;
+  }
+
+  .triage-standard {
+    @apply bg-blue-100 text-blue-700 border-blue-200;
+  }
+
+  .triage-non-urgent {
+    @apply bg-green-100 text-green-700 border-green-200;
+  }
+
+  .triage-minor {
+    @apply bg-gray-100 text-gray-700 border-gray-200;
+  }
+
+  /* Form & input utilities */
+  .input-wrapper {
+    @apply relative w-full;
+  }
+
+  .input-icon {
+    @apply absolute inset-y-0 left-3 flex items-center pointer-events-none text-muted-foreground;
+  }
+
+  .input-with-icon {
+    @apply pl-10 pr-4 py-2.5 w-full border border-input rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  /* Multi-step form utilities */
+  .step-indicator {
+    @apply w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium z-10;
+  }
+
+  .step-indicator-active {
+    @apply bg-primary text-white;
+  }
+
+  .step-indicator-completed {
+    @apply bg-primary text-white;
+  }
+
+  .step-indicator-inactive {
+    @apply bg-secondary text-muted-foreground;
+  }
+
+  .step-connector {
+    @apply absolute h-0.5 w-full left-0 right-0 top-4 -z-0;
+  }
+
+  .step-connector-active {
+    @apply bg-primary;
+  }
+
+  .step-connector-inactive {
+    @apply bg-secondary;
+  }
+}
